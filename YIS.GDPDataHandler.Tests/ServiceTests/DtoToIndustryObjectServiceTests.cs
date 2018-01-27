@@ -13,10 +13,10 @@ namespace YIS.GDPDataHandler.Tests.ServiceTests
     public class DtoToIndustryObjectServiceTests
     {
         [TestMethod]
-        public void ParseIndustryDtoToModelObject_ReturnsListOfTypeIndustrySector_GivenValidData()
+        public void ParseIndustryDtoToModelObject_ReturnsListOfTypeSector_GivenValidData()
         {
             var _dtoIndustryService = new DtoToIndustryObjectService();
-            var repo = IndustryGDPDataRepository.GetIndustrySectorGDPData();
+            var repo = IndustryGDPDataRepository.GetSectorGDPData();
             var list = repo.GetAll().ToList();
             var result = _dtoIndustryService.ParseIndustryDtoToModelObject(list);
             Assert.AreEqual(result, typeof(List<IndustryAnnualGDP>));

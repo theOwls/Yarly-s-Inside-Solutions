@@ -13,6 +13,6 @@ namespace YIS.GDPDataHandler.Db
         public Guid Id { get; set; }
         public string DateCode { get; set; }
         public string Value { get; set; }
-        public string IndustrySector { get; set; }
+        public string Sector { get; set; }
     }
 }

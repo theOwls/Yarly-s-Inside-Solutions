@@ -9,19 +9,19 @@ namespace YIS.GDPDataHandler.Tests.Mocks
 {
     public class IndustryGDPDataRepository
     {
-        public static MockRepository<IndustryYearIndexDto> GetIndustrySectorGDPData()
+        public static MockRepository<IndustryYearIndexDto> GetSectorGDPData()
         {
             var repo = new MockRepository<IndustryYearIndexDto>();
             repo.Add(new IndustryYearIndexDto
             {
                 DateCode = "1/2/2018",
-                IndustrySector = "Agriculture",
+                Sector = "Agriculture",
                 Value = "112"
             });
             repo.Add(new IndustryYearIndexDto
             {
                 DateCode = "1/2/2018",
-                IndustrySector = "Agriculture",
+                Sector = "Agriculture",
                 Value = "113"
             });
             return repo;

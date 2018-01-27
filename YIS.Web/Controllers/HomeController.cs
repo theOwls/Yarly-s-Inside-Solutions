@@ -17,13 +17,12 @@ namespace YIS.Web.Controllers
         {
             _gdpDataService = gdpDataService;
         }
-        public HomeController() { }
 
         // GET: Home
         public ActionResult Index()
         {
-            //var gdpData = _gdpDataService.GenerateData();
-            return View();
+            var gdpData = _gdpDataService.GenerateData();
+            return View(gdpData);
         }
     }
 }

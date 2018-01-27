@@ -28,9 +28,9 @@ namespace YIS.GDPDataHandler.Services
 
         public DataTable BuildDataTablesList(List<IndustryYearIndexDto> industryIndexDtoList)
         {
-            var industrySectorList = _industryObjectService.ParseIndustryDtoToModelObject(industryIndexDtoList);
+            var SectorList = _industryObjectService.ParseIndustryDtoToModelObject(industryIndexDtoList);
 
-            var industryEntitiesTable = _entityDataTableFactory.CreateDataTableFrom(industrySectorList);
+            var industryEntitiesTable = _entityDataTableFactory.CreateDataTableFrom(SectorList);
 
             return industryEntitiesTable;
         }

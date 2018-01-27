@@ -40,7 +40,7 @@ namespace YIS.GDPDataHandler.Services
             {
                 DateCode = ReadDataLine(lineData[1]),
                 Value = ReadDataLine(lineData[4]),
-                IndustrySector = ReadDataLine(lineData[5])
+                Sector = ReadDataLine(lineData[5])
             };
         }
 

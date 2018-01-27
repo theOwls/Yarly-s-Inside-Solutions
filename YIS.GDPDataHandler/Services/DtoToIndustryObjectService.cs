@@ -11,18 +11,18 @@ namespace YIS.GDPDataHandler.Services
     {
         public List<IndustryAnnualGDP> ParseIndustryDtoToModelObject(List<IndustryYearIndexDto> industryYearIndexDtoList)
         {
-            var industrySectorList = new List<IndustryAnnualGDP>();
+            var SectorList = new List<IndustryAnnualGDP>();
             foreach(var industryIndex in industryYearIndexDtoList)
             {
-                industrySectorList.Add(new IndustryAnnualGDP
+                SectorList.Add(new IndustryAnnualGDP
                 {
                     Id = Guid.NewGuid(),
                     DateCode = industryIndex.DateCode,
                     Value = industryIndex.Value,
-                    IndustrySector = industryIndex.IndustrySector
+                    Sector = industryIndex.Sector
                 });
             }
-            return industrySectorList;
+            return SectorList;
         }
     }
 }

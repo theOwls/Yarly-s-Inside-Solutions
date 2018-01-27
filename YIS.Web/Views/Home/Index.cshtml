@@ -1,5 +1,5 @@
 ﻿@using YIS.GDPDataHandler.Db;
-@model IndustryAnnualGDP
+@model List<IndustryAnnualGDP>
 
 @{
     ViewBag.Title = "Bathos Insights";
@@ -12,12 +12,16 @@
            <tr>
                <th>Industry</th>
                <th>GDP Value</th>
+               <th>Year</th>
            </tr>
        </thead>
         <tbody>
-            <tr><td>Steel</td><td>1.5</td></tr>
+            <tr>
+            <td>@Model.FirstOrDefault().Sector</td>
+            <td>@Model.FirstOrDefault().Value</td>
+            <td>@Model.FirstOrDefault().DateCode</td>
+            </tr>
         </tbody>
     </table>
-    <p>Hello World!</p>
 </div>
 
