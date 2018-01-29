@@ -74,6 +74,7 @@ namespace YIS.Web.App_Start
             kernel.Bind<DbContext>().To<GDPDataHandler.Infrastructure.DbContext>();
             kernel.Bind<IUnitOfWork>().To<UnitOfWork>().InRequestScope();
             kernel.Bind<IGDPDataService>().To<GDPDataService>();
+            kernel.Bind<IGDPChartService>().To<GDPChartService>();
         }        
     }
 }
